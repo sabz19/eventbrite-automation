@@ -1,6 +1,6 @@
-import {getEventDetails} from './EventBrite/query';
+import {getEventDetails} from './EventBrite/EventSeriesWorkflow/query';
 
 
 ( async () => {
-    console.log(await getEventDetails())
+    await getEventDetails();
 })();

@@ -8,7 +8,7 @@ module.exports = {
     main: "./src/index.ts",
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: "[name]-bundle.js",
   },
   target:'node', // This is important to tell webpack to compile for node
