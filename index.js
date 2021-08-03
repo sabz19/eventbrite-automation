@@ -5,9 +5,11 @@ let config = {
     headers:{
         Authorization:'Bearer YU3ZOA2QWNF4R3SZFGAP'
     }
-}
 
-axios.get('https://www.eventbriteapi.com/v3/series/117176613405/events?start_date.range_star=2021-07-20&start_date.range_end=2021-07-21',config)
+}
+let url = new URL('https://www.eventbriteapi.com/v3/series/117176613405/events');
+url.search = 'start_date.range_star=2021-07-20&start_date.range_end=2021-07-21';
+axios.get(url.toString(),config)
   .then(response => {
     console.log(response.data);
   })
