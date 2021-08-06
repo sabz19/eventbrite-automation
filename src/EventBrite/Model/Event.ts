@@ -12,4 +12,5 @@ type timeDetails = {
 export interface Event{
     start: timeDetails;
     end: timeDetails
+    id: string;
 }
