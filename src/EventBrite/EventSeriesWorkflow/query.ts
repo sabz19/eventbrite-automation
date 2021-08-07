@@ -11,6 +11,7 @@ import moment from "moment";
 import { URL } from "url";
 import {request} from '../Request';
 import { getAttendeeInfo } from "../AttendeeWorkflow/GetAttendee";
+import { assert } from "console";
 
 /** Needs to be a user input */
 const startDateInit = "2021-08-08";
@@ -40,9 +41,13 @@ function timeMatches(startDate: string, inputTime: string) {
 function getMatchingEvent(eventData: EventSeries): Array<String> {
   const events = eventData.events;
   const matchingEvents = [];
+  if(!eventData || !events){
+    return [];
+  }
 
   for (let i = 0; i < events.length; i++) {
     const startDate = events[i]["start"].utc;
+    assert(startDate != undefined);
     const day = moment(startDate).format("dddd");
     if (eventDays.includes(day)) {
       if (timeMatches(startDate, inputTime)) {

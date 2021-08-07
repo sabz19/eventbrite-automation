@@ -1,6 +1,5 @@
 import {getEventDetails} from './EventBrite/EventSeriesWorkflow/query';
 
-
-( async () => {
+export async function start(){
     await getEventDetails();
-})();
+};
