@@ -1,3 +1,3 @@
 export const ebEnvironment = {
-    base:'https://www.eventbriteapi.com',
+    base:'https://eb-automation.herokuapp.com',
 }

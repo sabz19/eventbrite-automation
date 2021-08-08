@@ -19,8 +19,8 @@ const startDateEnd = "2021-08-10";
 const inputTime: string = "18:00";
 /**  */
 
-const eventSeriesId = "117176613405";
-const eventPath = `/v3/series/${eventSeriesId}/events`;
+
+const eventPath = `/getEventDetails`;
 const query = `start_date.range_start=${startDateInit}&start_date.range_end=${startDateEnd}`;
 const eventAPI = ebEnvironment.base + eventPath;
 
