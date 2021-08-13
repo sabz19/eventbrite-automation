@@ -62,6 +62,7 @@ function getMatchingEvent(eventData: EventSeries): Array<String> {
 export async function getEventDetails() {
   let url = new URL(eventAPI);
   url.search = query;
+  console.log('Query = ', url);
   const matchingEvents = getMatchingEvent(await request(url) as EventSeries);
   getAttendeeInfo(matchingEvents);
   console.log("matching event = ", matchingEvents);
