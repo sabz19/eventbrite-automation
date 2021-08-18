@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: "[name]-bundle.js",
   },
-  target:'node', // This is important to tell webpack to compile for node
+  target:'electron-main', // This is important to tell webpack to compile for node
   resolve: {
     // Add ".ts" and ".tsx" as resolvable extensions.
     extensions: [".ts", ".tsx", ".js"],
